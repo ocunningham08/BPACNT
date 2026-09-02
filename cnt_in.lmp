@@ -1,0 +1,103 @@
+atom_style 	  full
+units 		  real
+bond_style        harmonic
+angle_style       harmonic
+dihedral_style    opls
+improper_style    harmonic
+pair_style        lj/cut/coul/long 11.0 11.0
+pair_modify       mix geometric
+special_bonds     lj/coul 0.0 0.0 0.5
+kspace_style      pppm 0.0001
+neighbor	  2.0 bin
+timestep 	  1
+thermo	   	  5000
+
+variable     	  seed equal ceil(random(0,100000,42))
+
+read_data 	  input.data extra/atom/types 10 extra/bond/types 8 extra/angle/types 11 extra/dihedral/types 15 extra/improper/types 1 extra/bond/per/atom 15 extra/angle/per/atom 15 extra/dihedral/per/atom 50 extra/improper/per/atom 50 extra/special/per/atom 100 
+include 	  cnt_params.lmp
+
+molecule 	  bpa bpa.mol toff 1 boff 1 doff 1 ioff 1
+group 	  	  bpa type 2 3 4 5 6 7 8 9
+
+molecule 	  water water.mol toff 9 boff 8 aoff 10
+group 	 	  water type 10 11
+
+#---------- Create atoms ----------
+
+region 		  cnt cylinder z 40 40 8 0 61.352 side out
+region 		  bpa cylinder z 40 40 13 0 61.352 side in
+region 		  tube intersect 2 cnt bpa
+
+create_atoms 	  0 random 5 ${seed} tube mol bpa ${seed} overlap 2
+create_atoms 	  0 random 12370 ${seed} cnt mol water ${seed} overlap 2
+
+#---------- Set velocities ----------
+
+velocity	  all create 300 903723
+
+#---------- Thermo Variables ----------
+
+variable 	  eq_run equal 100000
+variable 	  pr_run equal 100000000
+variable	  U equal pe
+variable	  T equal temp
+variable 	  P equal press	
+variable          t equal time
+variable 	  step equal step
+variable	  vol equal vol
+variable	  a equal cella
+variable	  b equal cellb
+variable	  c equal cellc
+
+#---------- Energy minimisation ----------
+
+minimize	  1.0e-4 1.0e-6 1000 1000  
+reset_timestep 	  0
+
+#---------- Equilibration NVT ----------
+
+fix     	  potential all print 5000 "${step} ${t} ${U} ${T} ${P} ${vol}" file eq_nvt.out screen no title "step t U T P V"
+fix		  temperature all nvt temp 300 300 1000
+
+dump    	  position all atom 5000 eq_nvt.traj
+
+dump_modify       position sort id
+dump_modify	  scale no
+
+run     	  ${eq_run}
+
+#---------- Equilibration NPT ----------
+
+unfix   	  potential
+unfix   	  temperature
+fix     	  potential all print 5000 "${step} ${t} ${U} ${T} ${P} ${vol} ${a} ${b} ${c}" file eq_npt.out screen no title "step t U T P V a b c"
+fix		  temperature all npt temp 300 300 1000 x 1 1 1000 y 1 1 1000 z 1 1 1000 couple xy
+
+undump  	  position
+dump    	  position all atom 5000 eq_npt.traj
+
+dump_modify       position sort id
+dump_modify       scale no
+
+run     	  ${eq_run}
+
+#---------- Production run NPT ----------
+
+unfix   	  potential
+unfix   	  temperature
+fix     	  potential all print 50000 "${step} ${t} ${U} ${T} ${P} ${vol} ${a} ${b} ${c}" file pr_npt.out screen no title  "step t U T P V a b c"
+fix		  pl all plumed plumedfile plumed.dat outfile p.log
+fix		  temperature all npt temp 300 300 1000 x 1 1 1000 y 1 1 1000 z 1 1 1000 couple xy
+
+undump  	  position
+dump    	  position all atom 50000 pr_npt.traj
+
+dump_modify       position sort id
+dump_modify       scale no
+
+reset_timestep 	  0
+restart 	  500000 tmp-2.restart tmp-1.restart
+
+run 		  ${pr_run}
+write_data 	  file.out
