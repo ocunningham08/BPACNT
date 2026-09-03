@@ -1,0 +1,51 @@
+# BPA CNT Metadynamics
+
+# Units
+UNITS LENGTH=A TIME=fs ENERGY=kcal/mol
+
+# Defining groups and variables
+
+CNT: GROUP ATOMS=1-1040
+BPA: GROUP ATOMS=1041-1073
+
+BPACOM: COM ATOMS=BPA
+energy: ENERGY
+
+c: CENTER ATOMS=CNT
+
+d: DISTANCE COMPONENTS ATOMS1=c,BPACOM
+
+rs: DISTANCES COMPONENTS GROUPA=c GROUPB=CNT
+
+rxy: CUSTOM ARG=rs.x,rs.y FUNC=sqrt(x*x+y*y) PERIODIC=NO
+
+radius: MEAN ARG=rxy PERIODIC=NO
+
+bias_cv: CUSTOM ARG=d.x,d.y,radius FUNC=sqrt(x*x+y*y)-z PERIODIC=NO
+
+#Define bias potential cv
+
+upperwalls: UPPER_WALLS ARG=bias_cv AT=15 KAPPA=4000.0 EXP=2 EPS=1 OFFSET=0.0
+lowerwalls: LOWER_WALLS ARG=bias_cv AT=-0.05 KAPPA=4000.0 EXP=2 EPS=1 OFFSET=0.0
+
+metad: METAD ...
+	TEMP=300
+	ARG=bias_cv
+	PACE=100
+	HEIGHT=1.2
+	SIGMA=1
+	BIASFACTOR=7
+	FILE=hills.out
+	GRID_MIN=-5
+	GRID_MAX=30
+	GRID_SPACING=0.005
+...
+
+PRINT FMT=%g STRIDE=10000 FILE=walls.out ARG=upperwalls.bias,lowerwalls.bias
+PRINT FMT=%g STRIDE=100 FILE=colvar.out ARG=bias_cv,radius,energy,metad.*
+
+# Additional definitions for analysis
+
+DUMPMASSCHARGE FILE=mcfile.out
+
+ENDPLUMED
