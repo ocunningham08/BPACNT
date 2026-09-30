@@ -1,0 +1,59 @@
+# BPA CNT Metadynamics
+
+# Units
+UNITS LENGTH=A TIME=fs ENERGY=kcal/mol
+
+# Defining groups and variables
+
+CNT: GROUP ATOMS=1-1040
+BPA1: GROUP ATOMS=1041-1073
+BPA2: GROUP ATOMS=1074-1106
+
+BPACOM1: COM ATOMS=BPA1
+BPACOM2: COM ATOMS=BPA2
+
+energy: ENERGY
+
+c: CENTER ATOMS=CNT
+
+d1: DISTANCE COMPONENTS ATOMS1=c,BPACOM1 
+d2: DISTANCE COMPONENTS ATOMS1=c,BPACOM2
+
+rs: DISTANCES COMPONENTS GROUPA=c GROUPB=CNT
+
+rxy: CUSTOM ARG=rs.x,rs.y FUNC=sqrt(x*x+y*y) PERIODIC=NO
+
+radius: MEAN ARG=rxy PERIODIC=NO
+
+bias_cv1: CUSTOM ARG=d1.x,d1.y,radius FUNC=sqrt(x*x+y*y)-z PERIODIC=NO
+bias_cv2: CUSTOM ARG=d2.x,d2.y,radius FUNC=sqrt(x*x+y*y)-z PERIODIC=NO
+
+#Define bias potential cv
+
+upperwalls1: UPPER_WALLS ARG=bias_cv1 AT=15 KAPPA=4000.0 EXP=2 EPS=1 OFFSET=0.0
+lowerwalls1: LOWER_WALLS ARG=bias_cv1 AT=-0.05 KAPPA=4000.0 EXP=2 EPS=1 OFFSET=0.0
+
+upperwalls2: UPPER_WALLS ARG=bias_cv2 AT=15 KAPPA=4000.0 EXP=2 EPS=1 OFFSET=0.0
+lowerwalls2: LOWER_WALLS ARG=bias_cv2 AT=-0.05 KAPPA=4000.0 EXP=2 EPS=1 OFFSET=0.0
+
+metad1: METAD ...
+	TEMP=300
+	ARG=bias_cv1,bias_cv2
+	PACE=100
+	HEIGHT=1.2
+	SIGMA=1,1
+	BIASFACTOR=7
+	FILE=hills1.out
+	GRID_MIN=-5,-5
+	GRID_MAX=30,30
+	GRID_SPACING=0.005,0.005
+...
+
+PRINT FMT=%g STRIDE=10000 FILE=walls.out ARG=upperwalls1.bias,lowerwalls1.bias,upperwalls2.bias,lowerwalls2.bias
+PRINT FMT=%g STRIDE=100 FILE=colvar.out ARG=bias_cv1,bias_cv2,radius,energy,metad1.*
+
+# Additional definitions for analysis
+
+DUMPMASSCHARGE FILE=mcfile.out
+
+ENDPLUMED

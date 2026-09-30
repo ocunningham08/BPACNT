@@ -1,0 +1,28 @@
+# vim:ft=plumed
+
+# Units and definitions
+UNITS LENGTH=A TIME=fs ENERGY=kcal/mol
+
+bias_cv1: READ FILE=colvar.out VALUES=bias_cv1 IGNORE_FORCES IGNORE_TIME
+bias_cv2: READ FILE=colvar.out VALUES=bias_cv2 IGNORE_FORCES IGNORE_TIME
+energy: READ FILE=colvar.out VALUES=energy IGNORE_TIME
+
+metad1: METAD ...
+  TEMP=300 
+  ARG=bias_cv1,bias_cv2
+  PACE=100 
+  HEIGHT=0.0
+  SIGMA=1,1 
+  BIASFACTOR=7
+  FILE=hills1.out
+  GRID_MIN=-5,-5
+  GRID_MAX=30,30
+  GRID_SPACING=0.005,0.005
+  RESTART=YES
+...
+
+rw: REWEIGHT_BIAS TEMP=300
+
+PRINT ARG=bias_cv1,bias_cv2,rw FILE=colvar_reweight.out STRIDE=1
+
+ENDPLUMED

@@ -1,0 +1,77 @@
+#----------- Masses ----------
+
+mass		 1 12.001   # C CNT
+mass		 2 12.011   # C BPA Methyl
+mass		 3 12.011   # C BPA Hinge
+mass		 4 1.008    # H BPA Metyl
+mass		 5 12.011   # C BPA Benzene
+mass		 6 1.008    # H BPA Benzene
+mass		 7 12.011   # C BPA Hydroxyl
+mass		 8 15.999   # O BPA Hydroxyl
+mass		 9 1.008    # H BPA Hydroxyl
+mass		 10 15.9994 # O Water
+mass		 11 1.008   # H Water
+
+#---------- Pair coeffs ----------
+
+pair_coeff	 1 1 0.076 3.55     # CNT C
+pair_coeff	 2 2 0.066 3.5      # BPA C Methyl
+pair_coeff	 3 3 0.066 3.5      # BPA C Hinge
+pair_coeff	 4 4 0.03 2.5       # BPA H Methyl
+pair_coeff	 5 5 0.07 3.55      # BPA C Benzene
+pair_coeff	 6 6 0.03 2.42      # BPA H Benzene
+pair_coeff	 7 7 0.07 3.55      # BPA C Hydroxyl
+pair_coeff	 8 8 0.17 3.07      # BPA O Hydroxyl
+pair_coeff	 9 9 0 0            # BPA H Hydroxyl
+pair_coeff	 10 10 0.1553 3.166 # H2O O
+pair_coeff	 11 11 0 0          # H2O H
+
+#--------- Bond coeffs ----------
+
+bond_coeff	 1 549.0 1.34 # CNT C-C 
+bond_coeff	 2 553 0.945  # BPA O-H Hydroxyl
+bond_coeff	 3 450 1.364  # BPA C-O Hydroxyl
+bond_coeff	 4 268 1.529  # BPA C-C Methyl-Hinge
+bond_coeff	 5 340 1.09   # BPA C-H Methyl
+bond_coeff	 6 317 1.51   # BPA C-C Hinge-Benzene
+bond_coeff	 7 469 1.4    # BPA C-C Benzene-Benzene / Benzene-Hydroxyl
+bond_coeff	 8 367 1.08   # BPA C-H Benzene
+bond_coeff	 9 600 1      # H2O O-H
+
+#---------- Angle coeffs ----------
+
+angle_coeff	 1 35 113      # BPA C-O-H Hydroxyl
+angle_coeff	 2 58.35 112.7 # BPA C-C-C Methyl-Hinge-Methyl
+angle_coeff	 3 33 107.8    # BPA H-C-H Methyl
+angle_coeff	 4 37.5 110.7  # BPA C-C-H Hinge-Methyl-Methyl
+angle_coeff	 5 40 109.5    # BPA C-C-C Benzene-Hinge-Benzene
+angle_coeff	 6 63 114      # BPA C-C-C Benzene-Hinge-Methyl
+angle_coeff	 7 63 120      # BPA C-C-C Benzene / Benzene-Hydroxyl-Benzene / Benzene-Benzene-Hydroxyl
+angle_coeff	 8 70 120      # BPA O-C-C Hydroxyl-Hydroxyl-Benzene
+angle_coeff	 9 70 120      # BPA C-C-C Hinge-Benzene-Benzene
+angle_coeff	 10 35 120     # BPA C-C-H Benzene / Hydroxyl-Benzene-Benzene
+angle_coeff	 11 75 109.47  # H2O H-O-H
+
+#---------- Dihedral coeffs ----------
+
+dihedral_coeff	 1 0 14 0 0           # CNT C-C-C-C
+dihedral_coeff	 2 0 1.682 0 0        # BPA C-C-O-H Benzene-Hydroxyl-Hydroxyl-Hydroxyl
+dihedral_coeff	 3 1.711 -0.5 0.663 0 # BPA C-C-C-H Methyl-Hinge-Methyl-Methyl
+dihedral_coeff	 4 0 0 0.3 0          # BPA C-C-C-H Methyl-Hinge-Methyl-Methyl 
+dihedral_coeff	 5 0 0 0.462 0        # BPA C-C-C-H Benzene-Hinge-Methyl-Methyl
+dihedral_coeff	 6 0 0 0 0            # BPA C-C-C-C Benzene-Hinge-Benzene-Benzene / Methyl-Hinge-Benzene-Benzene
+dihedral_coeff	 7 0 0 0 0            # BPA C-C-C-C Methyl-Hinge-Benzene-Benzene
+dihedral_coeff	 8 0 7.25 0 0         # BPA O-C-C-H / O-C-C-C Hydroxyl-Hydroxyl-Benzene-Benzene ; C-C-C-C / C-C-C-H / H-C-C-H Benzene ; C-C-C-C Benzene-Benzene-Benzene-Hydroxyl / Benzene-Benzene-Hydroxyl-Benzene / Hinge-Benzene-Benzene-Benzene ; C-C-C-H Hydroxyl-Benzene-Benzene-Benzene / Benzene-Hydroxyl-Benzene-Benzene / Hinge-Benzene-Benzene-Benzene
+dihedral_coeff	 9 0 7.25 0 0         # BPA C-C-C-H / C-C-C-C Hinge-Benzene-Benzene-Benzene
+dihedral_coeff	 10 0 7.25 0 0        # BPA C-C-C-C / C-C-C-H Benzene ; O-C-C-C Hydroxyl-Hydroxyl-Benzene-Benzene ; C-C-C-C Benzene-Benzene-Benzene-Hydroxyl / Benzene-Benzene-Hydroxyl-Benzene / Hinge-Benzene-Benzene-Benzene ; C-C-C-H Hydroxyl-Benzene-Benzene-Benzene / Benzene-Hydroxyl-Benzene-Benzene / Hinge-Benzene-Benzene-Benzene
+dihedral_coeff	 11 0 7.25 0 0        # BPA C-C-C-H / H-C-C-H Benzene ; O-C-C-H Hydroxyl-Hydroxyl-Benzene-Benzene ; C-C-C-H Hydroxyl-Benzene-Benzene-Benzene / Benzene-Hydroxyl-Benzene-Benzene / Hinge-Benzene-Benzene-Benzene  
+dihedral_coeff	 12 0 7.25 0 0        # BPA C-C-C-C Hinge-Benzene-Benzene-Benzene
+dihedral_coeff	 13 0 7.25 0 0        # BPA C-C-C-H Hinge-Benzene-Benzene-Benzene
+dihedral_coeff	 14 0 7.25 0 0        # BPA C-C-C-C Benzene / Benzene-Benzene-Hydroxyl-Benzene / Benzene-Benzene-Benzene-Hydroxyl
+dihedral_coeff	 15 0 7.25 0 0        # BPA C-C-C-H Benzene / Hydroxyl-Benzene-Benzene-Benzene / Benzene-Hydroxyl-Benzene-Benzene
+dihedral_coeff	 16 0 7.25 0 0        # BPA H-C-C-H Benzene
+
+#---------- Improper coeffs ----------
+
+improper_coeff	 1 15 180  # CNT C-C-C-C
+improper_coeff	 2 1.1 180 # BPA C-C-C-C Benzene-Hinge-Benzene-Benzene / Hinge-Benzene-Benzene-Benzene ;  C-C-C-H Benzene / Hydroxyl-Benzene-Benzene-Benzene / Benzene-Hydroxyl-Benzene-Benzene ; C-C-O-H Benzene-Hydroxyl-Hydroxyl-Benzene ; C-H-C-C Benzene / Benzene-Benzene-Benzene-Hydroxyl ; C-O-C-C Benzene-Hydroxyl-Hydroxyl-Benzene ; O-C-C-C Hydroxyl-Benzene-Hydroxyl-Benzene 

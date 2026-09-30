@@ -1,0 +1,14 @@
+#----------Variables----------
+
+variable                eq_run equal 100000
+variable                pr_run equal 0000000
+variable                U equal pe
+variable                T equal temp
+variable                P equal press
+variable                t equal time
+variable                step equal step
+variable                vol equal vol
+variable                a equal cella
+variable                b equal cellb
+variable                c equal cellc
+variable		den equal density
