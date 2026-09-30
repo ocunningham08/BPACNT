@@ -1,461 +1,461 @@
-#LAMMPS Bisphenol A molecule file
+# Bisphenol A molecule file
 
-33 atoms
-34 bonds
-56 angles
-208 dihedrals
-36 impropers
+33 	atoms
+34 	bonds
+56 	angles
+208 	dihedrals
+36 	impropers
 
-Types
+Types 	# N atom, atom type
 
-1 3
-2 5
-3 5
-4 4
-5 4
-6 5
-7 4
-8 6
-9 4
-10 4
-11 7
-12 5
-13 8
-14 3
-15 6
-16 5
-17 1
-18 8
-19 3
-20 4
-21 7
-22 4
-23 2
-24 3
-25 3
-26 4
-27 5
-28 1
-29 3
-30 5
-31 4
-32 4
-33 5
+1 	3 # H Methyl
+2 	5 # H Benzene
+3 	5 # H Benzene
+4 	4 # C Benzene
+5 	4 # C Benzene
+6 	5 # H Benzene
+7 	4 # C Benzene
+8 	6 # C Hydroxyl
+9 	4 # C Benzene
+10 	4 # C Benzene
+11 	7 # O Hydroxyl
+12 	5 # H Benzene
+13 	8 # H Hydroxyl
+14 	3 # H Methyl
+15 	6 # C Hydroxyl
+16 	5 # H Benzene
+17 	1 # C Methyl
+18 	8 # H Hydroxyl
+19 	3 # H Methyl
+20 	4 # C Benzene
+21 	7 # O Hydroxyl
+22 	4 # C Benzene
+23 	2 # C Hinge
+24 	3 # H Methyl
+25 	3 # H Methyl
+26 	4 # C Benzene
+27 	5 # H Benzene
+28 	1 # C Methyl
+29 	3 # H Methyl
+30 	5 # H Benzene
+31 	4 # C Benzene
+32 	4 # C Benzene
+33 	5 # H Benzene
 
-Charges
+Charges	# N atom, q
 
-1 0.06
-2 0.115
-3 0.115
-4 -0.115
-5 -0.115
-6 0.115
-7 -0.115
-8 0.15
-9 -0.115
-10 -0.115
-11 -0.585
-12 0.115
-13 0.435
-14 0.06
-15 0.15
-16 0.115
-17 -0.18
-18 0.435
-19 0.06
-20 -0.115
-21 -0.585
-22 -0.115
-23 0.23
-24 0.06
-25 0.06
-26 -0.115
-27 0.115
-28 -0.18
-29 0.06
-30 0.115
-31 -0.115
-32 -0.115
-33 0.115
+1 	0.06	# H Methyl
+2 	0.115	# H Benzene
+3 	0.115	# H Benzene
+4 	-0.115	# C Benzene
+5 	-0.115	# C Benzene
+6 	0.115	# H Benzene
+7 	-0.115	# C Benzene
+8 	0.15    # C Hydroxyl
+9 	-0.115  # C Benzene
+10	-0.115  # C Benzene
+11 	-0.585	# O Hydroxyl
+12 	0.115	# H Benzene
+13 	0.435	# H Hydroxyl
+14 	0.06	# H Methyl
+15 	0.15	# C Hydroxyl
+16 	0.115	# H Benzene
+17 	-0.18	# C Methyl
+18 	0.435	# H Hydroxyl
+19 	0.06	# H Methyl
+20 	-0.115	# C Benzene
+21 	-0.585	# O Hydroxyl
+22 	-0.115	# C Benzene
+23 	0.23	# C Hinge
+24 	0.06	# H Methyl
+25 	0.06	# H Methyl
+26 	-0.115	# C Benzene
+27 	0.115	# H Benzene
+28 	-0.18	# C Methyl
+29	0.06	# H Methyl
+30 	0.115	# H Benzene
+31 	-0.115	# C Benzene
+32 	-0.115	# C Benzene
+33 	0.115	# H Benzene
 
-Coords
+Coords 	# N atom, x, y, z
 
-1 14.54816427054573 24.958612130396723 58.058825815119405
-2 16.43771393137166 24.901050656175453 59.22608272156851
-3 18.95026419041296 24.308329721459916 59.623682567917605
-4 19.351684401126473 27.17197312942853 57.8502058994347
-5 16.90385628721679 26.67068128189433 58.12209484802777
-6 20.192948295572776 27.7524004849367 57.44859116110096
-7 14.369898324327918 29.98140350723909 60.06048140211816
-8 14.607798078132832 31.086589234578696 59.18890850410829
-9 15.15031734377506 28.408047932445296 58.26782669770844
-10 15.084872797071455 30.812654650434578 57.88316182671492
-11 14.395859220026901 32.39719327386418 59.50322590137784
-12 17.708654147680413 28.4143119974699 57.10510608136095
-13 20.862402954105466 25.16915404323686 59.68788537624731
-14 14.190572149072816 26.840631454510437 56.17365471744412
-15 19.67500033398459 26.055900289222144 58.64879592804062
-16 14.542763706707293 27.906531784089996 60.35443013519952
-17 14.428602885344205 26.043206309698604 58.49932401422242
-18 14.41203896752463 32.91599326691243 58.72116429813542
-19 15.442259014283222 25.701628804693232 56.111444406556615
-20 17.322642751711026 25.52940262515146 58.8493192694741
-21 20.91973271483845 25.718762255238556 58.925536373030496
-22 14.696140483451511 28.68178243342333 59.597896408592234
-23 15.457323567211787 26.980933183279394 57.881862707049535
-24 15.69414805452148 27.256005776863873 55.65453884329492
-25 13.417501593287689 26.329939643099266 58.36315674624806
-26 15.355007107225514 29.508909095446725 57.408051203623586
-27 15.380246642477207 31.57062313899602 57.194808317093816
-28 15.244321822896499 26.662296520991774 56.39917416221725
-29 14.558697471117641 25.973468041320256 59.53467878420388
-30 15.68218650396924 29.389508491314754 56.42100958295757
-31 17.953919770886856 27.490225700205123 57.65302535145305
-32 18.669398926115885 25.204718152624196 59.14086145808937
-33 14.05784434329452 30.17063357949131 61.06170101823506
+1 	14.54816427054573 24.958612130396723 58.058825815119405	 # H Methyl
+2 	16.43771393137166 24.901050656175453 59.22608272156851	 # H Benzene
+3 	18.95026419041296 24.308329721459916 59.623682567917605	 # H Benzene
+4 	19.351684401126473 27.17197312942853 57.8502058994347	 # C Benzene
+5 	16.90385628721679 26.67068128189433 58.12209484802777	 # C Benzene
+6 	20.192948295572776 27.7524004849367 57.44859116110096	 # H Benzene
+7 	14.369898324327918 29.98140350723909 60.06048140211816	 # C Benzene
+8 	14.607798078132832 31.086589234578696 59.18890850410829	 # C Hydroxyl
+9 	15.15031734377506 28.408047932445296 58.26782669770844	 # C Benzene
+10	15.084872797071455 30.812654650434578 57.88316182671492	 # C Benzene
+11	14.395859220026901 32.39719327386418 59.50322590137784	 # O Hydroxyl
+12 	17.708654147680413 28.4143119974699 57.10510608136095	 # H Benzene
+13 	20.862402954105466 25.16915404323686 59.68788537624731	 # H Hydroxyl
+14 	14.190572149072816 26.840631454510437 56.17365471744412	 # H Methyl
+15 	19.67500033398459 26.055900289222144 58.64879592804062	 # C Hydroxyl
+16 	14.542763706707293 27.906531784089996 60.35443013519952	 # H Benzene
+17	14.428602885344205 26.043206309698604 58.49932401422242	 # C Methyl
+18 	14.41203896752463 32.91599326691243 58.72116429813542	 # H Hydroxyl
+19 	15.442259014283222 25.701628804693232 56.111444406556615 # H Methyl
+20 	17.322642751711026 25.52940262515146 58.8493192694741	 # C Benzene
+21 	20.91973271483845 25.718762255238556 58.925536373030496	 # O Hydroxyl
+22 	14.696140483451511 28.68178243342333 59.597896408592234	 # C Benzene
+23 	15.457323567211787 26.980933183279394 57.881862707049535 # C Hinge
+24 	15.69414805452148 27.256005776863873 55.65453884329492	 # H Methyl
+25 	13.417501593287689 26.329939643099266 58.36315674624806	 # H Methyl
+26 	15.355007107225514 29.508909095446725 57.408051203623586 # C Benzene
+27 	15.380246642477207 31.57062313899602 57.194808317093816	 # H Benzene
+28 	15.244321822896499 26.662296520991774 56.39917416221725	 # C Methyl
+29 	14.558697471117641 25.973468041320256 59.53467878420388	 # H Methyl
+30 	15.68218650396924 29.389508491314754 56.42100958295757	 # H Benzene
+31 	17.953919770886856 27.490225700205123 57.65302535145305	 # C Benzene
+32 	18.669398926115885 25.204718152624196 59.14086145808937	 # C Benzene
+33 	14.05784434329452 30.17063357949131 61.06170101823506	 # H Benzene
 
-Bonds
+Bonds 	# N bond, bond type, atom 1, atom 2
 
-1 7 4 6
-2 6 4 15
-3 6 5 31
-4 5 5 23
-5 7 7 33
-6 6 7 22
-7 2 8 11
-8 6 8 7
-9 6 9 26
-10 7 10 27
-11 6 10 8
-12 1 11 18
-13 6 15 32
-14 4 17 29
-15 4 17 25
-16 4 17 1
-17 7 20 2
-18 6 20 5
-19 1 21 13
-20 2 21 15
-21 7 22 16
-22 6 22 9
-23 3 23 28
-24 3 23 17
-25 5 23 9
-26 7 26 30
-27 6 26 10
-28 4 28 14
-29 4 28 24
-30 4 28 19
-31 7 31 12
-32 6 31 4
-33 7 32 3
-34 6 32 20
+1 	7 	4 6   # C-H Benzene
+2 	6 	4 15  # C-C Benzene-Hydroxyl
+3 	6 	5 31  # C-C Benzene
+4 	5 	5 23  # C-C Benzene-Hinge
+5 	7 	7 33  # C-H Benzene
+6 	6 	7 22  # C-C Benzene
+7 	2 	8 11  # C-O Hydroxyl
+8 	6 	8 7   # C-C Benzene-Hydroxyl
+9 	6 	9 26  # C-C Benzene
+10	7 	10 27 # C-H Benzene
+11	6 	10 8  # C-C Benzene-Hydroxyl
+12	1 	11 18 # O-H Hydroxyl
+13 	6 	15 32 # C-C Benzene-Hydroxyl
+14 	4 	17 29 # C-H Methyl
+15 	4 	17 25 # C-H Methyl
+16 	4 	17 1  # C-H Methyl
+17 	7 	20 2  # C-H Benzene
+18 	6 	20 5  # C-C Benzene
+19 	1 	21 13 # O-H Hydroxyl
+20 	2 	21 15 # C-O Hydroxyl
+21 	7 	22 16 # C-H Benzene
+22 	6	22 9  # C-C Benzene
+23 	3 	23 28 # C-C Hinge-Methyl
+24 	3 	23 17 # C-C Hinge-Methyl
+25 	5 	23 9  # C-C Benzene-Hinge
+26 	7 	26 30 # C-H Benzene
+27 	6 	26 10 # C-C Benzene
+28 	4 	28 14 # C-H Methyl
+29 	4 	28 24 # C-H Methyl
+30 	4 	28 19 # C-H Methyl
+31 	7 	31 12 # C-H Benzene
+32 	6 	31 4  # C-C Benzene
+33 	7 	32 3  # C-H Benzene
+34 	6 	32 20 # C-C Benzene
 
-Angles
+Angles	# N angle, angle type, atom 1, atom 2, atom 3
 
-1 7 31 4 15
-2 10 31 4 6
-3 10 15 4 6
-4 7 20 5 31
-5 9 23 5 20
-6 9 23 5 31
-7 7 22 7 8
-8 10 22 7 33
-9 10 8 7 33
-10 7 7 8 10
-11 8 11 8 10
-12 8 11 8 7
-13 7 22 9 26
-14 9 23 9 26
-15 9 23 9 22
-16 7 26 10 8
-17 10 26 10 27
-18 10 8 10 27
-19 1 8 11 18
-20 7 32 15 4
-21 8 21 15 32
-22 8 21 15 4
-23 3 29 17 25
-24 3 29 17 1
-25 3 25 17 1
-26 4 23 17 29
-27 4 23 17 25
-28 4 23 17 1
-29 7 5 20 32
-30 10 5 20 2
-31 10 32 20 2
-32 1 15 21 13
-33 7 9 22 7
-34 10 9 22 16
-35 10 7 22 16
-36 2 28 23 17
-37 5 5 23 9
-38 6 5 23 28
-39 6 9 23 28
-40 6 5 23 17
-41 6 9 23 17
-42 7 9 26 10
-43 10 9 26 30
-44 10 10 26 30
-45 3 14 28 24
-46 3 14 28 19
-47 3 24 28 19
-48 4 23 28 14
-49 4 23 28 24
-50 4 23 28 19
-51 7 5 31 4
-52 10 5 31 12
-53 10 4 31 12
-54 7 20 32 15
-55 10 20 32 3
-56 10 15 32 3
+1 	7 	31 4 15  # C-C-C Benzene-Benzene-Hydroxyl
+2 	10 	31 4 6   # C-C-H Benzene
+3 	10 	15 4 6   # C-C-H Hydroxyl-Benzene-Benzene
+4 	7 	20 5 31  # C-C-C Benzene 
+5 	9 	23 5 20  # C-C-C Hinge-Benzene-Benzene
+6 	9 	23 5 31  # C-C-C Hinge-Benzene-Benzene
+7 	7 	22 7 8   # C-C-C Benzene-Benzene-Hydroxyl
+8 	10 	22 7 33  # C-C-H Benzene
+9 	10 	8 7 33   # C-C-H Hydroxyl-Benzene-Benzene
+10	7 	7 8 10   # C-C-C Benzene-Hydroxyl-Benzene
+11	8 	11 8 10  # O-C-C Hydroxyl-Hydroxyl-Benzene
+12	8 	11 8 7   # O-C-C Hydroxyl-Hydroxyl-Benzene
+13 	7 	22 9 26  # C-C-C Benzene
+14 	9 	23 9 26  # C-C-C Hinge-Benzene-Benzene
+15 	9 	23 9 22  # C-C-C Hinge-Benzene-Benzene
+16	7 	26 10 8  # C-C-C Benzene-Benzene-Hydroxyl
+17 	10 	26 10 27 # C-C-H Benzene
+18 	10 	8 10 27  # C-C-H Hydroxyl-Benzene-Benzene
+19 	1 	8 11 18  # C-O-H Hydroxyl
+20 	7 	32 15 4  # C-C-C Benzene-Hydroxyl-Benzene
+21 	8 	21 15 32 # O-C-C Hydroxyl-Hydroxyl-Benzene
+22 	8 	21 15 4  # O-C-C Hydroxyl-Hydroxyl-Benzene
+23 	3 	29 17 25 # H-C-H Methyl
+24 	3 	29 17 1  # H-C-H Methyl
+25 	3 	25 17 1  # H-C-H Methyl 
+26 	4 	23 17 29 # C-C-H Hinge-Methyl-Methyl
+27 	4 	23 17 25 # C-C-H Hinge-Methyl-Methyl
+28 	4 	23 17 1  # C-C-H Hinge-Methyl-Methyl
+29 	7 	5 20 32  # C-C-C Benzene
+30 	10 	5 20 2   # C-C-H Benzene
+31 	10 	32 20 2  # C-C-H Benzene
+32 	1 	15 21 13 # C-O-H Hydroxyl
+33 	7 	9 22 7   # C-C-C Benzene
+34 	10 	9 22 16  # C-C-H Benzene
+35 	10 	7 22 16  # C-C-H Benzene
+36 	2 	28 23 17 # C-C-C Methyl-Hinge-Methyl
+37 	5 	5 23 9   # C-C-C Benzene-Hinge-Benzene
+38 	6 	5 23 28  # C-C-C Benzene-Hinge-Methyl 
+39 	6 	9 23 28  # C-C-C Benzene-Hinge-Methyl
+40 	6 	5 23 17  # C-C-C Benzene-Hinge-Methyl
+41 	6 	9 23 17  # C-C-C Benzene-Hinge-Methyl
+42 	7 	9 26 10  # C-C-C Benzene
+43 	10 	9 26 30  # C-C-H Benzene
+44 	10 	10 26 30 # C-C-H Benzene
+45 	3 	14 28 24 # H-C-H Methyl
+46 	3 	14 28 19 # H-C-H Methyl
+47 	3 	24 28 19 # H-C-H Methyl
+48 	4 	23 28 14 # H-C-C Methyl-Methyl-Hinge
+49 	4 	23 28 24 # H-C-C Methyl-Methyl-Hinge
+50 	4 	23 28 19 # H-C-C Methyl-Methyl-Hinge
+51 	7 	5 31 4   # C-C-C Benzene
+52 	10 	5 31 12  # C-C-H Benzene
+53 	10 	4 31 12  # C-C-H Benzene
+54 	7 	20 32 15 # C-C-C Benzene-Benzene-Hydroxyl
+55 	10 	20 32 3  # C-C-H Benzene
+56 	10 	15 32 3  # C-C-H Hydroxyl-Benzene-Benzene
 
-Dihedrals
+Dihedrals	# N dihedral, dihedral type, atom 1, atom 2, atom 3, atom 4
 
-1 7 31 4 15 32
-2 7 15 4 31 12
-3 9 31 4 15 32
-4 9 15 4 31 12
-5 10 15 4 31 12
-6 13 31 4 15 32
-7 14 15 4 31 12
-8 7 23 5 20 32
-9 7 23 5 31 4
-10 7 23 5 20 2
-11 7 23 5 31 12
-12 7 20 5 31 12
-13 7 31 5 20 2
-14 7 20 5 31 4
-15 7 31 5 20 32
-16 8 23 5 20 32
-17 8 23 5 31 4
-18 8 23 5 20 2
-19 8 23 5 31 12
-20 9 23 5 20 32
-21 9 23 5 31 4
-22 9 20 5 31 4
-23 9 31 5 20 32
-24 9 31 5 20 2
-25 9 20 5 31 12
-26 10 23 5 20 2
-27 10 23 5 31 12
-28 10 20 5 31 12
-29 10 31 5 20 2
-30 11 23 5 20 32
-31 11 23 5 31 4
-32 12 23 5 20 2
-33 12 23 5 31 12
-34 13 20 5 31 4
-35 13 31 5 20 32
-36 14 20 5 31 12
-37 14 31 5 20 2
-38 7 22 7 8 10
-39 7 8 7 22 16
-40 9 22 7 8 10
-41 9 8 7 22 16
-42 10 8 7 22 16
-43 13 22 7 8 10
-44 14 8 7 22 16
-45 1 10 8 11 18
-46 1 7 8 11 18
-47 7 11 8 10 27
-48 7 11 8 7 33
-49 7 11 8 10 26
-50 7 11 8 7 22
-51 7 7 8 10 27
-52 7 10 8 7 33
-53 9 11 8 10 26
-54 9 11 8 7 22
-55 9 10 8 7 33
-56 9 7 8 10 27
-57 10 11 8 10 27
-58 10 11 8 7 33
-59 10 7 8 10 27
-60 10 10 8 7 33
-61 14 7 8 10 27
-62 14 10 8 7 33
-63 7 23 9 26 10
-64 7 23 9 22 7
-65 7 23 9 26 30
-66 7 23 9 22 16
-67 7 22 9 26 30
-68 7 26 9 22 16
-69 7 22 9 26 10
-70 7 26 9 22 7
-71 8 23 9 22 7
-72 8 23 9 26 10
-73 8 23 9 22 16
-74 8 23 9 26 30
-75 9 23 9 26 10
-76 9 23 9 22 7
-77 9 22 9 26 10
-78 9 26 9 22 7
-79 9 26 9 22 16
-80 9 22 9 26 30
-81 10 23 9 26 30
-82 10 23 9 22 16
-83 10 22 9 26 30
-84 10 26 9 22 16
-85 11 23 9 26 10
-86 11 23 9 22 7
-87 12 23 9 26 30
-88 12 23 9 22 16
-89 13 22 9 26 10
-90 13 26 9 22 7
-91 14 22 9 26 30
-92 14 26 9 22 16
-93 7 26 10 8 7
-94 7 8 10 26 30
-95 9 26 10 8 7
-96 9 8 10 26 30
-97 10 8 10 26 30
-98 13 26 10 8 7
-99 14 8 10 26 30
-100 1 32 15 21 13
-101 1 4 15 21 13
-102 7 21 15 32 3
-103 7 21 15 4 6
-104 7 21 15 32 20
-105 7 21 15 4 31
-106 7 32 15 4 6
-107 7 4 15 32 3
-108 9 21 15 32 20
-109 9 21 15 4 31
-110 9 4 15 32 3
-111 9 32 15 4 6
-112 10 21 15 32 3
-113 10 21 15 4 6
-114 10 32 15 4 6
-115 10 4 15 32 3
-116 14 32 15 4 6
-117 14 4 15 32 3
-118 7 5 20 32 15
-119 7 5 20 32 3
-120 7 2 20 32 3
-121 9 5 20 32 15
-122 9 5 20 32 3
-123 10 5 20 32 3
-124 10 2 20 32 3
-125 13 5 20 32 15
-126 14 5 20 32 3
-127 15 2 20 32 3
-128 7 9 22 7 8
-129 7 9 22 7 33
-130 7 16 22 7 33
-131 9 9 22 7 8
-132 9 9 22 7 33
-133 10 9 22 7 33
-134 10 16 22 7 33
-135 13 9 22 7 8
-136 14 9 22 7 33
-137 15 16 22 7 33
-138 2 17 23 28 14
-139 2 17 23 28 24
-140 2 17 23 28 19
-141 2 28 23 17 29
-142 2 28 23 17 25
-143 2 28 23 17 1
-144 3 28 23 17 29
-145 3 28 23 17 25
-146 3 28 23 17 1
-147 3 17 23 28 14
-148 3 17 23 28 24
-149 3 17 23 28 19
-150 4 5 23 28 14
-151 4 9 23 28 14
-152 4 5 23 28 24
-153 4 9 23 28 24
-154 4 5 23 28 19
-155 4 9 23 28 19
-156 4 5 23 17 29
-157 4 9 23 17 29
-158 4 5 23 17 25
-159 4 9 23 17 25
-160 4 5 23 17 1
-161 4 9 23 17 1
-162 5 5 23 9 26
-163 5 5 23 9 22
-164 5 9 23 5 20
-165 5 9 23 5 31
-166 5 28 23 5 20
-167 5 28 23 5 31
-168 5 28 23 9 26
-169 5 28 23 9 22
-170 5 17 23 5 20
-171 5 17 23 5 31
-172 5 17 23 9 26
-173 5 17 23 9 22
-174 6 28 23 5 20
-175 6 28 23 5 31
-176 6 28 23 9 26
-177 6 28 23 9 22
-178 6 17 23 5 20
-179 6 17 23 5 31
-180 6 17 23 9 26
-181 6 17 23 9 22
-182 7 9 26 10 8
-183 7 9 26 10 27
-184 7 30 26 10 27
-185 9 9 26 10 8
-186 9 9 26 10 27
-187 10 9 26 10 27
-188 10 30 26 10 27
-189 13 9 26 10 8
-190 14 9 26 10 27
-191 15 30 26 10 27
-192 7 5 31 4 15
-193 7 5 31 4 6
-194 7 12 31 4 6
-195 9 5 31 4 15
-196 9 5 31 4 6
-197 10 5 31 4 6
-198 10 12 31 4 6
-199 13 5 31 4 15
-200 14 5 31 4 6
-201 15 12 31 4 6
-202 7 20 32 15 4
-203 7 15 32 20 2
-204 9 20 32 15 4
-205 9 15 32 20 2
-206 10 15 32 20 2
-207 13 20 32 15 4
-208 14 15 32 20 2
+1 	7 	31 4 15 32  # C-C-C-C Benzene-Benzene-Hydroxyl-Benzene
+2 	7 	15 4 31 12  # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
+3 	9 	31 4 15 32  # C-C-C-C Benzene-Benzene-Hydroxyl-Benzene
+4 	9 	15 4 31 12  # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
+5 	10 	15 4 31 12  # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
+6 	13 	31 4 15 32  # C-C-C-C Benzene-Benzene-Hydroxyl-Benzene
+7 	14 	15 4 31 12  # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
+8 	7 	23 5 20 32  # C-C-C-C Hinge-Benzene-Benzene-Benzene 
+9 	7 	23 5 31 4   # C-C-C-C Hinge-Benzene-Benzene-Benzene
+10 	7 	23 5 20 2   # C-C-C-H Hinge-Benzene-Benzene-Benzene
+11 	7 	23 5 31 12  # C-C-C-H Hinge-Benzene-Benzene-Benzene
+12 	7 	20 5 31 12  # C-C-C-H Benzene
+13 	7 	31 5 20 2   # C-C-C-H Benzene
+14 	7 	20 5 31 4   # C-C-C-C Benzene
+15 	7 	31 5 20 32  # C-C-C-C Benzene
+16 	8 	23 5 20 32  # C-C-C-C Hinge-Benzene-Benzene-Benzene
+17 	8 	23 5 31 4   # C-C-C-C Hinge-Benzene-Benzene-Benzene
+18 	8 	23 5 20 2   # C-C-C-H Hinge-Benzene-Benzene-Benzene
+19 	8 	23 5 31 12  # C-C-C-H Hinge-Benzene-Benzene-Benzene
+20 	9 	23 5 20 32  # C-C-C-C Hinge-Benzene-Benzene-Benzene
+21 	9 	23 5 31 4   # C-C-C-H Hinge-Benzene-Benzene-Benzene
+22 	9 	20 5 31 4   # C-C-C-H Benzene
+23 	9 	31 5 20 32  # C-C-C-C Benzene
+24 	9 	31 5 20 2   # C-C-C-H Benzene
+25 	9 	20 5 31 12  # C-C-C-H Benzene
+26 	10 	23 5 20 2   # C-C-C-H Hinge-Benzene-Benzene-Benzene
+27 	10 	23 5 31 12  # C-C-C-H Hinge-Benzene-Benzene-Benzene
+28 	10 	20 5 31 12  # C-C-C-H Benzene
+29 	10 	31 5 20 2   # C-C-C-H Benzene
+30 	11 	23 5 20 32  # C-C-C-C Hinge-Benzene-Benzene-Benzene
+31 	11 	23 5 31 4   # C-C-C-C Hinge-Benzene-Benzene-Benzene
+32 	12 	23 5 20 2   # C-C-C-H Hinge-Benzene-Benzene-Benzene
+33 	12 	23 5 31 12  # C-C-C-H Hinge-Benzene-Benzene-Benzene
+34 	13 	20 5 31 4   # C-C-C-C Benzene
+35 	13 	31 5 20 32  # C-C-C-C Benzene
+36 	14 	20 5 31 12  # C-C-C-H Benzene
+37 	14 	31 5 20 2   # C-C-C-H Benzene
+38	7 	22 7 8 10   # C-C-C-C Benzene-Benzene-Hydroxyl-Benzene
+39 	7 	8 7 22 16   # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
+40 	9 	22 7 8 10   # C-C-C-C Benzene-Benzene-Hydroxyl-Benzene
+41 	9 	8 7 22 16   # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
+42 	10 	8 7 22 16   # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
+43 	13 	22 7 8 10   # C-C-C-C Benzene-Benzene-Hydroxyl-Benzene
+44 	14 	8 7 22 16   # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
+45 	1 	10 8 11 18  # C-C-O-H Benzene-Hydroxyl-Hydroxyl-Hydroxyl
+46 	1 	7 8 11 18   # C-C-O-H Benzene-Hydroxyl-Hydroxyl-Hydroxyl
+47 	7 	11 8 10 27  # O-C-C-H Hydroxyl-Hydroxyl-Benzene-Benzene
+48 	7 	11 8 7 33   # O-C-C-H Hydroxyl-Hydroxyl-Benzene-Benzene
+49 	7 	11 8 10 26  # O-C-C-C Hydroxyl-Hydroxyl-Benzene-Benzene
+50 	7 	11 8 7 22   # O-C-C-C Hydroxyl-Hydroxyl-Benzene-Benzene
+51 	7 	7 8 10 27   # C-C-C-H Benzene-Hydroxyl-Benzene-Benzene 
+52 	7 	10 8 7 33   # C-C-C-H Benzene-Hydroxyl-Benzene-Benzene
+53 	9 	11 8 10 26  # O-C-C-C Hydroxyl-Hydroxyl-Benzene-Benzene
+54 	9 	11 8 7 22   # O-C-C-C Hydroxyl-Hydroxyl-Benzene-Benzene
+55 	9 	10 8 7 33   # C-C-C-H Benzene-Hydroxyl-Benzene-Benzene
+56 	9 	7 8 10 27   # C-C-C-H Benzene-Hydroxyl-Benzene-Benzene
+57 	10 	11 8 10 27  # O-C-C-H Hydroxyl-Hydroxyl-Benzene-Benzene
+58 	10 	11 8 7 33   # O-C-C-H Hydroxyl-Hydroxyl-Benzene-Benzene
+59 	10 	7 8 10 27   # C-C-C-H Benzene-Hydroxyl-Benzene-Benzene
+60 	10 	10 8 7 33   # C-C-C-H Benzene-Hydroxyl-Benzene-Benzene
+61 	14 	7 8 10 27   # C-C-C-H Benzene-Hydroxyl-Benzene-Benzene
+62 	14 	10 8 7 33   # C-C-C-H Benzene-Hydroxyl-Benzene-Benzene
+63 	7 	23 9 26 10  # C-C-C-C Hinge-Benzene-Benzene-Benzene
+64 	7 	23 9 22 7   # C-C-C-C Hinge-Benzene-Benzene-Benzene
+65 	7 	23 9 26 30  # C-C-C-H Hinge-Benzene-Benzene-Benzene
+66 	7 	23 9 22 16  # C-C-C-H Hinge-Benzene-Benzene-Benzene
+67 	7 	22 9 26 30  # C-C-C-H Benzene
+68 	7 	26 9 22 16  # C-C-C-H Benzene
+69 	7 	22 9 26 10  # C-C-C-C Benzene
+70 	7 	26 9 22 7   # C-C-C-C Benzene
+71 	8 	23 9 22 7   # C-C-C-C Hinge-Benzene-Benzene-Benzene
+72 	8 	23 9 26 10  # C-C-C-C Hinge-Benzene-Benzene-Benzene
+73 	8 	23 9 22 16  # C-C-C-H Hinge-Benzene-Benzene-Benzene
+74 	8 	23 9 26 30  # C-C-C-H Hinge-Benzene-Benzene-Benzene
+75 	9 	23 9 26 10  # C-C-C-C Hinge-Benzene-Benzene-Benzene
+76 	9 	23 9 22 7   # C-C-C-C Hinge-Benzene-Benzene-Benzene
+77 	9 	22 9 26 10  # C-C-C-C Benzene
+78 	9 	26 9 22 7   # C-C-C-C Benzene
+79 	9 	26 9 22 16  # C-C-C-H Benzene
+80 	9 	22 9 26 30  # C-C-C-H Benzene
+81 	10 	23 9 26 30  # C-C-C-H Hinge-Benzene-Benzene-Benzene 
+82 	10 	23 9 22 16  # C-C-C-H Hinge-Benzene-Benzene-Benzene
+83 	10 	22 9 26 30  # C-C-C-H Benzene
+84	10 	26 9 22 16  # C-C-C-H Benzene
+85 	11 	23 9 26 10  # C-C-C-C Hinge-Benzene-Benzene-Benzene
+86	11 	23 9 22 7   # C-C-C-C Hinge-Benzene-Benzene-Benzene
+87 	12 	23 9 26 30  # C-C-C-H Hinge-Benzene-Benzene-Benzene
+88 	12 	23 9 22 16  # C-C-C-H Hinge-Benzene-Benzene-Benzene
+89 	13 	22 9 26 10  # C-C-C-C Benzene
+90 	13 	26 9 22 7   # C-C-C-C Benzene
+91 	14 	22 9 26 30  # C-C-C-H Benzene
+92 	14 	26 9 22 16  # C-C-C-H Benzene
+93 	7 	26 10 8 7   # C-C-C-C Benzene-Benzene-Hydroxyl-Benzene
+94 	7 	8 10 26 30  # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
+95 	9 	26 10 8 7   # C-C-C-C Benzene-Benzene-Hydroxyl-Benzene
+96 	9 	8 10 26 30  # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
+97 	10 	8 10 26 30  # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
+98 	13 	26 10 8 7   # C-C-C-C Benzene-Benzene-Hydroxyl-Benzene
+99 	14 	8 10 26 30  # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
+100	1 	32 15 21 13 # C-C-O-H Benzene-Hydroxyl-Hydroxyl-Hydroxyl
+101	1 	4 15 21 13  # C-C-O-H Benzene-Hydroxyl-Hydroxyl-Hydroxyl
+102	7 	21 15 32 3  # O-C-C-H Hydroxyl-Hydroxyl-Benzene-Benzene 
+103 	7 	21 15 4 6   # O-C-C-H Hydroxyl-Hydroxyl-Benzene-Benzene 
+104 	7 	21 15 32 20 # O-C-C-C Hydroxyl-Hydroxyl-Benzene-Benzene 
+105 	7 	21 15 4 31  # O-C-C-C Hydroxyl-Hydroxyl-Benzene-Benzene 
+106 	7 	32 15 4 6   # C-C-C-H Benzene-Hydroxyl-Benzene-Benzene
+107	7 	4 15 32 3   # C-C-C-H Benzene-Hydroxyl-Benzene-Benzene
+108 	9 	21 15 32 20 # O-C-C-C Hydroxyl-Hydroxyl-Benzene-Benzene
+109 	9 	21 15 4 31  # O-C-C-C Hydroxyl-Hydroxyl-Benzene-Benzene
+110 	9 	4 15 32 3   # C-C-C-H Benzene-Hydroxyl-Benzene-Benzene
+111 	9 	32 15 4 6   # C-C-C-H Benzene-Hydroxyl-Benzene-Benzene
+112 	10 	21 15 32 3  # O-C-C-H Hydroxyl-Hydroxyl-Benzene-Benzene
+113 	10 	21 15 4 6   # O-C-C-H Hydroxyl-Hydroxyl-Benzene-Benzene
+114 	10 	32 15 4 6   # C-C-C-H Benzene-Hydroxyl-Benzene-Benzene
+115 	10 	4 15 32 3   # C-C-C-H Benzene-Hydroxyl-Benzene-Benzene
+116 	14 	32 15 4 6   # C-C-C-H Benzene-Hydroxyl-Benzene-Benzene
+117 	14 	4 15 32 3   # C-C-C-H Benzene-Hydroxyl-Benzene-Benzene
+118 	7 	5 20 32 15  # C-C-C-C Benzene-Benzene-Benzene-Hydroxyl
+119	7 	5 20 32 3   # C-C-C-H Benzene
+120 	7 	2 20 32 3   # C-C-C-H Benzene
+121 	9 	5 20 32 15  # C-C-C-C Benzene-Benzene-Benzene-Hydroxyl
+122 	9 	5 20 32 3   # C-C-C-H Benzene
+123 	10 	5 20 32 3   # C-C-C-H Benzene
+124 	10 	2 20 32 3   # H-C-C-H Benzene
+125 	13 	5 20 32 15  # C-C-C-C Benzene-Benzene-Benzene-Hydroxyl
+126 	14 	5 20 32 3   # C-C-C-H Benzene
+127 	15 	2 20 32 3   # H-C-C-H Benzene
+128 	7 	9 22 7 8    # C-C-C-C Benzene-Benzene-Benzene-Hydroxyl
+129 	7 	9 22 7 33   # C-C-C-H Benzene
+130 	7 	16 22 7 33  # H-C-C-H Benzene
+131 	9 	9 22 7 8    # C-C-C-C Benzene-Benzene-Benzene-Hydroxyl
+132 	9 	9 22 7 33   # C-C-C-H Benzene
+133 	10 	9 22 7 33   # C-C-C-H Benzene
+134 	10 	16 22 7 33  # H-C-C-H Benzene
+135 	13 	9 22 7 8    # C-C-C-C Benzene-Benzene-Benzene-Hydroxyl
+136 	14 	9 22 7 33   # C-C-C-H Benzene
+137 	15 	16 22 7 33  # H-C-C-H Benzene
+138 	2 	17 23 28 14 # C-C-C-H Methyl-Hinge-Methyl-Methyl
+139 	2 	17 23 28 24 # C-C-C-H Methyl-Hinge-Methyl-Methyl
+140 	2 	17 23 28 19 # C-C-C-H Methyl-Hinge-Methyl-Methyl
+141 	2 	28 23 17 29 # C-C-C-H Methyl-Hinge-Methyl-Methyl
+142 	2 	28 23 17 25 # C-C-C-H Methyl-Hinge-Methyl-Methyl
+143 	2 	28 23 17 1  # C-C-C-H Methyl-Hinge-Methyl-Methyl
+144 	3 	28 23 17 29 # C-C-C-H Methyl-Hinge-Methyl-Methyl
+145 	3 	28 23 17 25 # C-C-C-H Methyl-Hinge-Methyl-Methyl
+146 	3 	28 23 17 1  # C-C-C-H Methyl-Hinge-Methyl-Methyl
+147 	3 	17 23 28 14 # C-C-C-H Methyl-Hinge-Methyl-Methyl
+148 	3 	17 23 28 24 # C-C-C-H Methyl-Hinge-Methyl-Methyl
+149 	3 	17 23 28 19 # C-C-C-H Methyl-Hinge-Methyl-Methyl
+150 	4 	5 23 28 14  # C-C-C-H Benzene-Hinge-Methyl-Methyl
+151 	4 	9 23 28 14  # C-C-C-H Benzene-Hinge-Methyl-Methyl
+152 	4 	5 23 28 24  # C-C-C-H Benzene-Hinge-Methyl-Methyl
+153 	4 	9 23 28 24  # C-C-C-H Benzene-Hinge-Methyl-Methyl
+154 	4 	5 23 28 19  # C-C-C-H Benzene-Hinge-Methyl-Methyl
+155	4 	9 23 28 19  # C-C-C-H Benzene-Hinge-Methyl-Methyl
+156 	4 	5 23 17 29  # C-C-C-H Benzene-Hinge-Methyl-Methyl
+157 	4 	9 23 17 29  # C-C-C-H Benzene-Hinge-Methyl-Methyl
+158	4 	5 23 17 25  # C-C-C-H Benzene-Hinge-Methyl-Methyl
+159 	4 	9 23 17 25  # C-C-C-H Benzene-Hinge-Methyl-Methyl
+160 	4 	5 23 17 1   # C-C-C-H Benzene-Hinge-Methyl-Methyl
+161 	4 	9 23 17 1   # C-C-C-H Benzene-Hinge-Methyl-Methyl
+162 	5 	5 23 9 26   # C-C-C-C Benzene-Hinge-Benzene-Benzene
+163 	5 	5 23 9 22   # C-C-C-C Benzene-Hinge-Benzene-Benzene
+164 	5 	9 23 5 20   # C-C-C-C Benzene-Hinge-Benzene-Benzene
+165 	5 	9 23 5 31   # C-C-C-C Benzene-Hinge-Benzene-Benzene
+166 	5 	28 23 5 20  # C-C-C-C Methyl-Hinge-Benzene-Benzene
+167 	5 	28 23 5 31  # C-C-C-C Methyl-Hinge-Benzene-Benzene
+168 	5 	28 23 9 26  # C-C-C-C Methyl-Hinge-Benzene-Benzene
+169 	5 	28 23 9 22  # C-C-C-C Methyl-Hinge-Benzene-Benzene
+170 	5 	17 23 5 20  # C-C-C-C Methyl-Hinge-Benzene-Benzene
+171 	5 	17 23 5 31  # C-C-C-C Methyl-Hinge-Benzene-Benzene
+172 	5 	17 23 9 26  # C-C-C-C Methyl-Hinge-Benzene-Benzene
+173 	5 	17 23 9 22  # C-C-C-C Methyl-Hinge-Benzene-Benzene
+174 	6 	28 23 5 20  # C-C-C-C Methyl-Hinge-Benzene-Benzene
+175 	6	28 23 5 31  # C-C-C-C Methyl-Hinge-Benzene-Benzene
+176 	6 	28 23 9 26  # C-C-C-C Methyl-Hinge-Benzene-Benzene
+177 	6 	28 23 9 22  # C-C-C-C Methyl-Hinge-Benzene-Benzene
+178 	6 	17 23 5 20  # C-C-C-C Methyl-Hinge-Benzene-Benzene
+179 	6 	17 23 5 31  # C-C-C-C Methyl-Hinge-Benzene-Benzene
+180 	6 	17 23 9 26  # C-C-C-C Methyl-Hinge-Benzene-Benzene
+181 	6 	17 23 9 22  # C-C-C-C Methyl-Hinge-Benzene-Benzene
+182 	7 	9 26 10 8   # C-C-C-C Benzene-Benzene-Benzene-Hydroxyl
+183 	7 	9 26 10 27  # C-C-C-H Benzene
+184 	7 	30 26 10 27 # H-C-C-H Benzene
+185 	9 	9 26 10 8   # C-C-C-C Benzene-Benzene-Benzene-Hydroxyl
+186 	9 	9 26 10 27  # C-C-C-H Benzene
+187 	10	9 26 10 27  # C-C-C-H Benzene
+188 	10	30 26 10 27 # H-C-C-H Benzene
+189 	13	9 26 10 8   # C-C-C-C Benzene-Benzene-Benzene-Hydroxyl
+190 	14 	9 26 10 27  # C-C-C-H Benzene
+191 	15 	30 26 10 27 # H-C-C-H Benzene
+192 	7 	5 31 4 15   # C-C-C-C Benzene-Benzene-Benzene-Hydroxyl
+193 	7 	5 31 4 6    # C-C-C-H Benzene
+194 	7 	12 31 4 6   # H-C-C-H Benzene
+195 	9 	5 31 4 15   # C-C-C-C Benzene-Benzene-Benzene-Hydroxyl
+196 	9 	5 31 4 6    # C-C-C-H Benzene
+197 	10 	5 31 4 6    # C-C-C-H Benzene
+198 	10 	12 31 4 6   # H-C-C-H Benzene
+199	13 	5 31 4 15   # C-C-C-C Benzene-Benzene-Benzene-Hydroxyl
+200	14 	5 31 4 6    # C-C-C-H Benzene
+201 	15 	12 31 4 6   # H-C-C-H Benzene
+202 	7 	20 32 15 4  # C-C-C-C Benzene-Benzene-Hydroxyl-Benzene
+203 	7 	15 32 20 2  # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
+204 	9 	20 32 15 4  # C-C-C-C Benzene-Benzene-Hydroxyl-Benzene
+205 	9 	15 32 20 2  # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
+206 	10 	15 32 20 2  # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
+207 	13 	20 32 15 4  # C-C-C-C Benzene-Benzene-Hydroxyl-Benzene
+208 	14 	15 32 20 2  # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
 
-Impropers
+Impropers	# N improper, improper type, atom 1, atom 2, atom 3, atom 4
 
-1 1 5 2 20 32
-2 1 20 3 32 15
-3 1 21 4 15 32
-4 1 5 4 31 12
-5 1 32 5 20 2
-6 1 4 5 31 12
-7 1 31 6 4 15
-8 1 11 7 8 10
-9 1 9 7 22 16
-10 1 22 8 7 33
-11 1 26 8 10 27
-12 1 7 9 22 16
-13 1 10 9 26 30
-14 1 11 10 8 7
-15 1 9 10 26 30
-16 1 7 11 8 10
-17 1 5 12 31 4
-18 1 20 15 32 3
-19 1 31 15 4 6
-20 1 9 16 22 7
-21 1 23 20 5 31
-22 1 15 20 32 3
-23 1 32 21 15 4
-24 1 23 22 9 26
-25 1 8 22 7 33
-26 1 20 23 5 31
-27 1 22 23 9 26
-28 1 23 26 9 22
-29 1 8 26 10 27
-30 1 26 27 10 8
-31 1 9 30 26 10
-32 1 23 31 5 20
-33 1 15 31 4 6
-34 1 21 32 15 4
-35 1 5 32 20 2
-36 1 22 33 7 8
+1 	1 	5 2 20 32  # C-H-C-C Benzene
+2 	1 	20 3 32 15 # C-H-C-C Benzene-Benzene-Benzene-Hydroxyl
+3	1 	21 4 15 32 # O-C-C-C Hydroxyl-Benzene-Hydroxyl-Benzene
+4 	1 	5 4 31 12  # C-C-C-H Benzene
+5 	1 	32 5 20 2  # C-C-C-H Benzene
+6 	1 	4 5 31 12  # C-C-C-H Benzene
+7 	1 	31 6 4 15  # C-H-C-C Benzene-Benzene-Benzene-Hydroxyl
+8 	1 	11 7 8 10  # O-C-C-C Hydroxyl-Benzene-Hydroxyl-Benzene
+9 	1 	9 7 22 16  # C-C-C-H Benzene
+10 	1 	22 8 7 33  # C-C-O-H Benzene-Hydroxyl-Hydroxyl-Benzene
+11 	1 	26 8 10 27 # C-C-C-H Benzene-Hydroxyl-Benzene-Benzene
+12 	1 	7 9 22 16  # C-C-C-H Benzene
+13 	1 	10 9 26 30 # C-C-C-H Benzene
+14 	1 	11 10 8 7  # O-C-C-C Hydroxyl-Benzene-Hydroxyl-Benzene
+15 	1 	9 10 26 30 # C-C-C-H Benzene
+16 	1	7 11 8 10  # C-O-C-C Benzene-Hydroxyl-Hydroxyl-Benzene
+17 	1 	5 12 31 4  # C-H-C-C Benzene
+18 	1 	20 15 32 3 # C-C-C-H Benzene-Hydroxyl-Benzene-Benzene
+19 	1 	31 15 4 6  # C-C-C-H Benzene-Hydroxyl-Benzene-Benzene
+20 	1 	9 16 22 7  # C-H-C-C Benzene
+21 	1 	23 20 5 31 # C-C-C-C Hinge-Benzene-Benzene-Benzene
+22 	1 	15 20 32 3 # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
+23 	1 	32 21 15 4 # C-O-C-C Benzene-Hydroxyl-Hydroxyl-Benzene
+24 	1 	23 22 9 26 # C-C-C-C Hinge-Benzene-Benzene-Benzene
+25 	1 	8 22 7 33  # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
+26 	1 	20 23 5 31 # C-C-C-C Benzene-Hinge-Benzene-Benzene
+27 	1 	22 23 9 26 # C-C-C-C Benzene-Hinge-Benzene-Benzene
+28 	1 	23 26 9 22 # C-C-C-C Hinge-Benzene-Benzene-Benzene
+29 	1 	8 26 10 27 # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
+30 	1 	26 27 10 8 # C-H-C-C Benzene-Benzene-Benzene-Hydroxyl
+31 	1 	9 30 26 10 # C-H-C-C Benzene
+32 	1 	23 31 5 20 # C-C-C-C Hinge-Benzene-Benzene-Benzene
+33 	1 	15 31 4 6  # C-C-C-H Hydroxyl-Benzene-Benzene-Benzene
+34 	1 	21 32 15 4 # O-C-C-C Hydroxyl-Benzene-Hydroxyl-Benzene
+35 	1 	5 32 20 2  # C-C-C-H Benzene
+36 	1 	22 33 7 8  # C-H-C-C Benzene-Benzene-Benzene-Hydroxyl

@@ -1,90 +1,86 @@
-atom_style 	full
-units 		real
-bond_style      harmonic
-angle_style	harmonic
-dihedral_style	opls
-improper_style  harmonic
-pair_style      lj/cut/coul/long 11.0 11.0
-pair_modify     mix geometric
-special_bonds   lj/coul 0.0 0.0 0.5
-neighbor	2.0 bin
-timestep 	1
-thermo	   	500
-kspace_style 	pppm 0.0001
+#---------- Preamble and Data Read ----------
 
-read_data 	equil_bpa_graphene.out 
+atom_style 	 	full                       # atom ID, molecule ID, atom type, q, x, y, z columns in data file
+units 		 	real 			   # mass - g/mol ; distance-Angstrom ; energy-kcal/mol ; time-fs ; temperature-Kelvin ; pressure-atm ; density-g/cm^3
+bond_style        	harmonic
+angle_style       	harmonic
+dihedral_style    	opls
+improper_style    	harmonic
+pair_style        	lj/cut/coul/long 11.0 11.0 # Lennard Jones with cutoff and Coulomb with long-range solver
+pair_modify       	mix geometric		   
+special_bonds     	lj/coul 0.0 0.0 0.5
+kspace_style      	pppm 0.0001                # Long-range solver
+neighbor	  	2.0 bin		
+timestep 	  	1			   # fs
+thermo	   	  	500  			   # How often to print to lmp.out
 
-#---------- CNT ----------
+read_data		equil_bpa_graphene.out
 
-group 		graphene type 1
 
-#---------- Water ----------
+#---------- Molecule set up ----------
 
-group 		water type 2 3
+group 			bpa type 2 3 4 5 6 7 8 9
 
-#---------- BPA ------------
+group 			water type 10 11
 
-molecule 	bpa bpa.mol toff 3 boff 2 aoff 1
+#---------- Variables ----------
 
-group 		bpa type 4 5 6 7 8 9 10 11
-
-#---------- Thermo Variables ----------
-
-variable 	eq_run equal 100000
-variable 	pr_run equal 10000000
-variable	U equal pe
-variable	T equal temp
-variable 	P equal press	
-variable        t equal time
-variable 	step equal step
-variable	vol equal vol
-variable	a equal cella
-variable	b equal cellb
-variable	c equal cellc
+include			variables.lmp
 
 #---------- Energy minimisation ----------
 
-minimize 	1.0e-4 1.0e-6 1000 1000  
-reset_timestep 	0
+minimize 		1.0e-4 1.0e-6 1000 1000  
+reset_timestep 		0
+write_data 		start.data
 
 #---------- Equilibration NVT ----------
 
-fix     	potential all print 500 "${step} ${t} ${U} ${T} ${P} ${vol}" file eq_nvt.out screen no title "step t U T P V"
-fix		temperature all nvt temp 300 300 1000
+fix     		potential all print 500 "${step} ${t} ${U} ${T} ${P} ${vol} ${den}" file eq_nvt.out screen no title "# t U T P V density"
+fix			temperature all nvt temp 300 300 1000
 
-dump    	position all atom 500 eq_nvt.traj
-dump_modify 	position sort id 
-dump_modify     position scale no
+dump    		position all atom 500 eq_nvt.traj
 
-run     	${eq_run}
+dump_modify     	position sort id
+dump_modify		position scale no
+dump_modify		position image no
+
+run     		${eq_run}
 
 #---------- Equilibration NPT ----------
 
-unfix   	potential
-unfix   	temperature
-fix     	potential all print 500 "${step} ${t} ${U} ${T} ${P} ${vol} ${a} ${b} ${c}" file eq_npt.out screen no title "step t U T P V a b c"
-fix		temperature all npt temp 300 300 1000 x 1 1 1000 y 1 1 1000 z 1 1 1000 
+unfix   		potential
+unfix   		temperature
 
-undump  	position
-dump    	position all atom 500 eq_npt.traj
-dump_modify 	position sort id
-dump_modify     position scale no
+fix     		potential all print 500 "${step} ${t} ${U} ${T} ${P} ${vol} ${den} ${a} ${b} ${c}" file eq_npt.out screen no title "# t U T P V density a b c"
+fix			temperature all npt temp 300 300 1000 x 1 1 1000 y 1 1 1000 z 1 1 1000 couple xy
 
-run     	${eq_run}
+undump  		position
 
-write_data 	equil_bpa_graphene.out 
+dump    		position all atom 500 eq_npt.traj
+dump_modify     	position sort id
+dump_modify             position scale no
+dump_modify             position image no
 
-#---------- Production NPT ----------
+run     		${eq_run}
 
-unfix   	potential
-unfix   	temperature
-fix     	potential all print 500 "${step} ${t} ${U} ${T} ${P} ${vol} ${a} ${b} ${c}" file pr_npt.out screen no title "step t U T P V a b c"
-fix     	temperature all npt temp 300 300 1000 x 1 1 1000 y 1 1 1000 z 1 1 1000 
+#---------- Production run NPT ----------
 
-undump  	position
-dump    	position all atom 500 pr_npt.traj
-dump_modify 	position sort id
-dump_modify	position scale no
+unfix   		potential
+unfix   		temperature
 
-run     ${pr_run}
+fix     		potential all print 500 "${step} ${t} ${U} ${T} ${P} ${vol} ${den} ${a} ${b} ${c}" file pr_npt.out screen no title  "# t U T P V density a b c"
+fix			temperature all npt temp 300 300 1000 x 1 1 1000 y 1 1 1000 z 1 1 1000 couple xy
 
+undump  		position
+
+dump    		position all atom 500 pr_npt.traj
+dump_modify     	position sort id
+dump_modify             position scale no
+dump_modify             position image no
+
+reset_timestep 		0
+restart 		500000 tmp-2.restart tmp-1.restart
+
+run 			${pr_run}
+
+write_data		final.data
